@@ -11,9 +11,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     dict.getOut(invalue).then(function (data) {
       const interface = new UI();
       interface.showUi(data);
-    }).then(error){
-      console.log(error);}
-      ;
+    })
 });
 
 class UI {
@@ -26,7 +24,7 @@ class UI {
       ".output"
     ).innerHTML = ` <div class="card card-body mt-5">
         <div class="row">
-          {data? (
+        
                     <div class="col">
             <h1>${datas.word}</h1>
             <h5>${datas.meanings[0].definitions[0].definition}</h5>
@@ -36,10 +34,10 @@ class UI {
             <h1>${cleanedWord}</h1>
           </div>
         </div>
-          ):<p>loding</p>
+          
 
 
-        }
+    
       </div>`;
   }
 }
