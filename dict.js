@@ -4,7 +4,7 @@ class Dictionary {
       `https://api.dictionaryapi.dev/api/v2/entries/en/${user}`
     );
 
-    const resData = await response.json();
+    setTimeout(const resData = await response.json(),2000);
 
     return resData;
   }
