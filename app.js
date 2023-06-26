@@ -11,7 +11,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     dict.getOut(invalue).then(function (data) {
       const interface = new UI();
       interface.showUi(data);
-    })
+    },setTimeout(500)
 });
 
 class UI {
