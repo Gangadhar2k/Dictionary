@@ -20,7 +20,9 @@ class UI {
     const word = datas.phonetics[1].text;
     const cleanedWord = word.replace(/\//g, "");
     // console.log(datas.phonetics[1].text);
-    document.querySelector(
+
+    {datas &&(
+        document.querySelector(
       ".output"
     ).innerHTML = ` <div class="card card-body mt-5">
         <div class="row">
@@ -39,5 +41,7 @@ class UI {
 
     
       </div>`;
+    ):(<p>loading</p>)}
+  
   }
 }
